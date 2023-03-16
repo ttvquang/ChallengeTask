@@ -1,14 +1,13 @@
 const { getMessageFromDevin } = require('./getMessageFromQuang');
 
-// console.log('=====Debug Quang.test.js=====')
-// const urls = [
-//   'http://www.devinnguyen.vn/devin0',
-//   'http://www.devinnguyen.vn/devin1',
-//   'http://www.devinnguyen.vn/devin2',
-//   'http://www.devinnguyen.vn/devin3',
-// ];
+const urls = [
+  'http://www.devinnguyen.vn/devin0',
+  'http://www.devinnguyen.vn/devin1',
+  'http://www.devinnguyen.vn/devin2',
+  'http://www.devinnguyen.vn/devin3',
+];
 
-const urls = 'http://www.devinnguyen.vn/devin3'
+// const urls = ['http://www.devinnguyen.vn/devin0']
  
 
 // test('Should not throw any err', () => {
@@ -17,20 +16,14 @@ const urls = 'http://www.devinnguyen.vn/devin3'
 // });
 
 test('Should responses to be correct', async () => {
-  expect.assertions(5);
-  
-
+  // expect.assertions(5);
   const results = await getMessageFromDevin(urls);
 
-  // console.log('results body: ' + results.body)
-  // console.log('results status code: ' + results.status)
-  
-  // expect(results.length).toBe(4);
-
-  // expect(results[0]).toEqual({ 'Devin Nguyen': 'MY NAME IS DEVIN' });
-  // expect(results[1]).toEqual({ 'Devin Nguyen': 'mynameisThang' });
-  // expect(results[2]).toEqual({ 'Devin Nguyen': 'DiegoAndDevinAreBrother' });
-  // expect(results[3]).toEqual({ 'FAILED': 'The request has been failed' });
+  expect(results.length).toBe(4);
+  expect(results[0]).toEqual({ 'Devin Nguyen': 'MY NAME IS DEVIN' });
+  expect(results[1]).toEqual({ 'Devin Nguyen': 'mynameisThang' });
+  expect(results[2]).toEqual({ 'Devin Nguyen': 'DiegoAndDevinAreBrother' });
+  expect(results[3]).toEqual({ 'FAILED': 'The request has been failed' });
 });
 
 // test('Should the code to be executed in less than 400ms', async () => {
