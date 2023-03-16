@@ -13,18 +13,18 @@ const urls = [
 //   expect(async () => await getMessageFromDevin(urls)).not.toThrow(); 
 // });
 
-// test('Should responses to be correct', async () => {
-//   expect.assertions(5);
+test('Should responses to be correct', async () => {
+  expect.assertions(5);
 
-//   const results = await getMessageFromDevin(urls);
+  const results = await getMessageFromDevin(urls);
   
-//   expect(results.length).toBe(4);
+  expect(results.length).toBe(4);
 
-//   expect(results[0]).toEqual({ 'Devin Nguyen': 'MY NAME IS DEVIN' });
-//   expect(results[1]).toEqual({ 'Devin Nguyen': 'mynameisThang' });
-//   expect(results[2]).toEqual({ 'Devin Nguyen': 'DiegoAndDevinAreBrother' });
-//   expect(results[3]).toEqual({ 'FAILED': 'The request has been failed' });
-// });
+  expect(results[0]).toEqual({ 'Devin Nguyen': 'MY NAME IS DEVIN' });
+  expect(results[1]).toEqual({ 'Devin Nguyen': 'mynameisThang' });
+  expect(results[2]).toEqual({ 'Devin Nguyen': 'DiegoAndDevinAreBrother' });
+  expect(results[3]).toEqual({ 'FAILED': 'The request has been failed' });
+});
 
 test('Should the code to be executed in less than 400ms', async () => {
   expect.assertions(2);

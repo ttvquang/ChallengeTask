@@ -1,5 +1,6 @@
 const { getMessageFromDevin } = require('./getMessageFromQuang');
 
+console.log('=====Debug on getMessageFromQuang.test.js =====')
 const urls = [
   'http://www.devinnguyen.vn/devin0',
   'http://www.devinnguyen.vn/devin1',
@@ -36,5 +37,4 @@ test('Should the code to be executed in less than 400ms', async () => {
   
   expect(seconds).toBe(0);
   expect(nanos / 1000 / 1000).toBeLessThan(400);
-  // expect(nanos / 1000 / 1000).toBeLessThan(900);
 });
